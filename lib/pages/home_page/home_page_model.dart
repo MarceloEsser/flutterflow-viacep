@@ -12,7 +12,7 @@ class HomePageModel extends FlutterFlowModel {
 
   // State field(s) for postalCodeField widget.
   TextEditingController? postalCodeFieldController;
-  final postalCodeFieldMask = MaskTextInputFormatter(mask: '####-###');
+  final postalCodeFieldMask = MaskTextInputFormatter(mask: '#####-###');
   String? Function(BuildContext, String?)? postalCodeFieldControllerValidator;
   // Stores action output result for [Backend Call - API (get address by cep)] action in searchButton widget.
   ApiCallResponse? apiResultpjq;
