@@ -4,7 +4,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:provider/provider.dart';
 
 class HomePageModel extends FlutterFlowModel {
@@ -12,7 +11,6 @@ class HomePageModel extends FlutterFlowModel {
 
   // State field(s) for postalCodeField widget.
   TextEditingController? postalCodeFieldController;
-  final postalCodeFieldMask = MaskTextInputFormatter(mask: '#####-###');
   String? Function(BuildContext, String?)? postalCodeFieldControllerValidator;
   // Stores action output result for [Backend Call - API (get address by cep)] action in searchButton widget.
   ApiCallResponse? apiResultpjq;

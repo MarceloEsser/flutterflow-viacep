@@ -4,7 +4,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:provider/provider.dart';
 import 'home_page_model.dart';
 export 'home_page_model.dart';
@@ -133,7 +132,6 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           keyboardType: TextInputType.number,
                           validator: _model.postalCodeFieldControllerValidator
                               .asValidator(context),
-                          inputFormatters: [_model.postalCodeFieldMask],
                         ),
                       ),
                     ),
