@@ -171,17 +171,21 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   ],
                 ),
                 Text(
-                  (_model.address?.jsonBody ?? '').toString(),
-                  style: FlutterFlowTheme.of(context).bodyText1,
-                ),
-                Text(
-                  GetAddressByCepCall.cep(
+                  GetAddressByCepCall.postalCode(
                     (_model.address?.jsonBody ?? ''),
                   ).toString(),
                   style: FlutterFlowTheme.of(context).bodyText1,
                 ),
                 Text(
-                  'Hello World',
+                  GetAddressByCepCall.street(
+                    (_model.address?.jsonBody ?? ''),
+                  ).toString(),
+                  style: FlutterFlowTheme.of(context).bodyText1,
+                ),
+                Text(
+                  GetAddressByCepCall.stateCode(
+                    (_model.address?.jsonBody ?? ''),
+                  ).toString(),
                   style: FlutterFlowTheme.of(context).bodyText1,
                 ),
                 Text(

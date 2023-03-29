@@ -26,9 +26,25 @@ class GetAddressByCepCall {
     );
   }
 
-  static dynamic cep(dynamic response) => getJsonField(
+  static dynamic postalCode(dynamic response) => getJsonField(
         response,
-        r'''$''',
+        r'''$.cep''',
+      );
+  static dynamic street(dynamic response) => getJsonField(
+        response,
+        r'''$.logradouro''',
+      );
+  static dynamic stateCode(dynamic response) => getJsonField(
+        response,
+        r'''$.uf''',
+      );
+  static dynamic city(dynamic response) => getJsonField(
+        response,
+        r'''$.localidade''',
+      );
+  static dynamic neighborhood(dynamic response) => getJsonField(
+        response,
+        r'''$.bairro''',
       );
 }
 
