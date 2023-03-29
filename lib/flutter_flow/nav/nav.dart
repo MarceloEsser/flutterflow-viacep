@@ -42,11 +42,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => HomePageWidget(
             cep: params.getParam('cep', ParamType.String),
           ),
-        ),
-        FFRoute(
-          name: 'foods',
-          path: '/foods',
-          builder: (context, params) => FoodsWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       urlPathStrategy: UrlPathStrategy.path,

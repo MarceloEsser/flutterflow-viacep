@@ -183,13 +183,15 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   style: FlutterFlowTheme.of(context).bodyText1,
                 ),
                 Text(
-                  GetAddressByCepCall.stateCode(
+                  GetAddressByCepCall.neighborhood(
                     (_model.address?.jsonBody ?? ''),
                   ).toString(),
                   style: FlutterFlowTheme.of(context).bodyText1,
                 ),
                 Text(
-                  'Hello World',
+                  GetAddressByCepCall.city(
+                    (_model.address?.jsonBody ?? ''),
+                  ).toString(),
                   style: FlutterFlowTheme.of(context).bodyText1,
                 ),
               ],
