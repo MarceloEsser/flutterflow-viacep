@@ -148,10 +148,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                       ),
                       showLoadingIndicator: true,
                       onPressed: () async {
-                        _model.apiResultpjq = await GetAddressByCepCall.call(
-                          cep: widget.cep,
+                        _model.address = await GetAddressByCepCall.call(
+                          cep: _model.postalCodeFieldController.text,
                         );
-                        if ((_model.apiResultpjq?.succeeded ?? true)) {
+                        if ((_model.address?.succeeded ?? true)) {
                           setState(() {
                             _model.postalCodeFieldController?.clear();
                           });
@@ -171,12 +171,12 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   ],
                 ),
                 Text(
-                  (_model.apiResultpjq?.jsonBody ?? '').toString(),
+                  (_model.address?.jsonBody ?? '').toString(),
                   style: FlutterFlowTheme.of(context).bodyText1,
                 ),
                 Text(
                   GetAddressByCepCall.cep(
-                    (_model.apiResultpjq?.jsonBody ?? ''),
+                    (_model.address?.jsonBody ?? ''),
                   ).toString(),
                   style: FlutterFlowTheme.of(context).bodyText1,
                 ),

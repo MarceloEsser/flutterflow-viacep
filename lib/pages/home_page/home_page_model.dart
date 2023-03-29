@@ -13,7 +13,7 @@ class HomePageModel extends FlutterFlowModel {
   TextEditingController? postalCodeFieldController;
   String? Function(BuildContext, String?)? postalCodeFieldControllerValidator;
   // Stores action output result for [Backend Call - API (get address by cep)] action in searchButton widget.
-  ApiCallResponse? apiResultpjq;
+  ApiCallResponse? address;
 
   /// Initialization and disposal methods.
 
