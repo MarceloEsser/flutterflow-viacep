@@ -25,6 +25,11 @@ class GetAddressByCepCall {
       cache: false,
     );
   }
+
+  static dynamic cep(dynamic response) => getJsonField(
+        response,
+        r'''$''',
+      );
 }
 
 class ApiPagingParams {

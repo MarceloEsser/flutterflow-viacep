@@ -177,7 +177,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   style: FlutterFlowTheme.of(context).bodyText1,
                 ),
                 Text(
-                  'Hello World',
+                  GetAddressByCepCall.cep(
+                    (_model.apiResultpjq?.jsonBody ?? ''),
+                  ).toString(),
                   style: FlutterFlowTheme.of(context).bodyText1,
                 ),
                 Text(
